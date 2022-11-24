@@ -2,7 +2,12 @@ import React from 'react'
 
 const NavbarLogo = () => {
   return (
-    <div className='tracking-[5px] uppercase list-none'>filiprade</div>
+    <a 
+      href='/'
+      className='tracking-[5px] px-2 linear-wipe uppercase list-none font-bold text-8xl italic text-[#dddddd]'
+    >
+      filip rade
+    </a>
   )
 }
 

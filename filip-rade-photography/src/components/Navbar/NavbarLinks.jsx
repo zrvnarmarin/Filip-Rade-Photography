@@ -7,7 +7,7 @@ const NavbarLinks = () => {
     <div>
         <ul className='items-center gap-14 hidden sm:flex'>
         {navbarLinks.map(navbarLink => 
-          <li key={navbarLink.name}>
+          <li className='text-sm' key={navbarLink.name}>
             <Link to={navbarLink.link}>{navbarLink.name}</Link>
           </li>
         )}
