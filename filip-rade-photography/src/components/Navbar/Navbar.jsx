@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='body-gradient text-white font-roboto flex flex-col items-center gap-12 p-4'>
+      <nav className='bg-black text-white font-robotoSlab flex justify-between items-center gap-12 p-4'>
         <NavbarLogo />
         <NavbarLinks />
         <MenuButton onClickMenuButton={menuButtonHandler} />
