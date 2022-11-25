@@ -1,6 +1,8 @@
 import React from 'react'
 import ContactImage from '../assets/contactMe.png'
 import { contactInfo } from '../data/contacts'
+import VeroImage from '../assets/vero-modified.png'
+import '../styles/Contact.css'
 
 const Contact = () => {
   return (
@@ -8,7 +10,33 @@ const Contact = () => {
       <h1 className='text-center text-white font-light text-6xl pt-8 pb-14'>Contact</h1>
 
       <div className='grid grod-cols-1 sm:grid-cols-2 xs:px-4 sm:px-12 gap-6'>
-        <img className='place-self-center' src={ContactImage} />
+
+        <div className="wrapper grid place-content-center">
+          <div className="box-area">
+              <div className="box box-front">
+                  <div className="test-container">
+                      <img className="test-image" src="https://www.qualitylogoproducts.com/images/_promo-university/social-media/_icon_linkedin-smi.svg" />
+                  </div>
+              </div>
+              <div className="box box-right">
+                  <div className="test-container">
+                      <img className="test-image" src="https://www.qualitylogoproducts.com/images/_promo-university/social-media/_icon_facebook-smi.svg" />
+                  </div>
+              </div>
+              <div className="box box-back">
+                  <div className="test-container">
+                      <img className="test-image" src="https://www.qualitylogoproducts.com/images/_promo-university/social-media/_icon_instagram-smi.svg" />
+                  </div>
+              </div>
+              <div className="box box-left">
+                  <div className="test-container">
+                      <img className="vero-image" src={VeroImage} />
+                  </div>
+              </div>
+              <div className="box box-top"></div>
+              <div className="box box-bottom"></div>
+          </div>
+        </div>
         
         <div>
           <h2 className='p-2 flex flex-wrap text-3xl text-white font-medium linear-wipe'>Will you make your memories count?</h2>
@@ -66,6 +94,7 @@ const Contact = () => {
 
           </form>
         </div>
+        
       </div>
     </div>
   )

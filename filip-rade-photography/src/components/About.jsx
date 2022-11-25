@@ -1,5 +1,6 @@
 import React from 'react'
 import AuthorImage from '../assets/me.jpg'
+// import '../styles/About.css'
 
 const About = () => {
   return (
@@ -8,7 +9,7 @@ const About = () => {
       <h1 className='text-center text-white font-light text-6xl pt-8 pb-14'>About</h1>
 
       <div className='grid grod-cols-1 sm:grid-cols-2 xs:px-4 sm:px-12 gap-6'>
-        <img src={AuthorImage} />
+        <img className='' src={AuthorImage} />
         <div>
           <h2 className='p-2 flex flex-wrap text-3xl text-white font-medium linear-wipe'>Artist statement</h2>
           <p className='text-white text-lg font-light pt-4'>
