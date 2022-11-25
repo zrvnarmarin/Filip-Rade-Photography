@@ -1,5 +1,5 @@
 .linear-wipe {
-    background: linear-gradient(to right, #FFF 20%, #6ff651 40%, #4eff13 60%, #FFF 80%);
+    background: linear-gradient(to right, #FFF 20%, #757575 40%, #4f4f4f 60%, #FFF 80%);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;

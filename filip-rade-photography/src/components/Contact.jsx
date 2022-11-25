@@ -11,7 +11,7 @@ const Contact = () => {
         <img className='place-self-center' src={ContactImage} />
         
         <div>
-          <h2 className='p-2 flex flex-wrap text-3xl text-white font-medium'>Will you make your memories count?</h2>
+          <h2 className='p-2 flex flex-wrap text-3xl text-white font-medium linear-wipe'>Will you make your memories count?</h2>
           <h2 className='p-2 flex flex-wrap text-white text-lg font-normal italic'>For all enquires and bookings, please contact me using one of the
             following, or the form below..
           </h2>
