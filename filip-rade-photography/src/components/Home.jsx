@@ -1,9 +1,11 @@
 import React from 'react'
 import ImageCard from './Home/ImageCard'
+import ImageCardsGrid from './Home/ImageCardsGrid'
+import DropdownMenu from './Navbar/DropdownMenu'
 
 const Home = () => {
   return (
-    <section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'>
+    <ImageCardsGrid>
       <ImageCard />
       <ImageCard />      
       <ImageCard />      
@@ -11,7 +13,8 @@ const Home = () => {
       <ImageCard />      
       <ImageCard />      
       <ImageCard />      
-    </section>
+      <DropdownMenu />
+    </ImageCardsGrid>
   )
 }
 
