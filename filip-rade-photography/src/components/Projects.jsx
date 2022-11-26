@@ -1,8 +1,9 @@
 import React, {useRef} from 'react'
+import { useParams } from 'react-router-dom'
 import ImageCardsGrid from './Home/ImageCardsGrid'
 import ImageCard from './Home/ImageCard'
-import { useParams } from 'react-router-dom'
 import { imageCategories } from '../data/imageCategories'
+// import TestImage from '../assets/nature.jpg'
 
 const Projects = () => {
   const { imageCategory } = useParams()
@@ -18,7 +19,7 @@ const Projects = () => {
           // console.log(category.name === imageCategory ? 'true' : 'false')
           if (category.name === imageCategory) {
             return category.images.map(image => 
-              <ImageCard key={image.name} name={image.name} source={image.source} onOpenModal={openModalHandler} />
+              <ImageCard key={image.id} name={image.name} source={image.source} onOpenModal={openModalHandler} />
             )}
           }
         )}

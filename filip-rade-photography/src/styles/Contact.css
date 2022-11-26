@@ -9,9 +9,11 @@
   justify-content: center;
   align-items: center;
 }
+
 .test-image {
  width: 600px;
 }
+
 .wrapper {
   top: 50%;
   left: 50%;
