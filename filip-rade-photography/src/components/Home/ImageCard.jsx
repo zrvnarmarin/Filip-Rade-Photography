@@ -1,16 +1,15 @@
 import React from 'react'
 import '../../styles/ImageCard.css'
-import TestImage from '../../assets/nature.jpg'
 
-const ImageCard = ({onOpenModal}) => {
+const ImageCard = ({name, source, onOpenModal}) => {
   return (
     <div className="container">
-        <img src={TestImage} className="image" onClick={onOpenModal} />
+        <img src={source} className="image" onClick={onOpenModal} />
         <div className="middle">
           <div className="text-white ">+</div>
         </div>
         <div className="middle-two">
-          <div className="text-white">Bok svima, ja sam opis slike</div>
+          <div className="text-white">{name}</div>
         </div>
     </div>
   )

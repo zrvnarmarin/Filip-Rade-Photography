@@ -1,19 +1,44 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import ImageCardsGrid from './Home/ImageCardsGrid'
+import ImageCard from './Home/ImageCard'
+import { useParams } from 'react-router-dom'
 import { imageCategories } from '../data/imageCategories'
-import ImageCategory from './Projects/ImageCategory'
 
 const Projects = () => {
+  const { imageCategory } = useParams()
+  const modalRef = useRef()
+  const openModalHandler = () => modalRef.current.style.display = "block"
+  const closeModalHandler = () => modalRef.current.style.display = "none"
+  
   return (
-    <section className='body-gradient'>
-      <div className='px-4 py-2 ss:px-6 ss:py-4 sm:px-12 sm:py-6 md:px-16 md:py-10 lg:px-20 lg:py-12'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-          {imageCategories.map(imageCategory => 
-            <ImageCategory key={imageCategory.id} category={imageCategory.name} />
-          )}
+    <>
+      {/* <p>{imageCategory}</p> */}
+      <ImageCardsGrid>
+        {imageCategories.map(category => {
+          // console.log(category.name === imageCategory ? 'true' : 'false')
+          if (category.name === imageCategory) {
+            return category.images.map(image => 
+              <ImageCard key={image.name} name={image.name} source={image.source} onOpenModal={openModalHandler} />
+            )}
+          }
+        )}
+        
+      </ImageCardsGrid>
+
+      {/* <div className="modal" ref={modalRef}>
+        <span className='slide-number'>8/18</span>
+        <span className="close cursor" onClick={closeModalHandler} >&times;</span>
+        <div className="modal-content">
+
+          <img src={TestImage} />
+          
+          <a className="prev" >&#10094;</a>
+          <a className="next" >&#10095;</a>
         </div>
-      </div>
-    </section>
-  )
+      </div> */}
+
+    </>
+    )
 }
 
 export default Projects

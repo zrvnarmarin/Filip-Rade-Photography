@@ -1,5 +1,4 @@
 import React from 'react'
-import ContactImage from '../assets/contactMe.png'
 import { contactInfo } from '../data/contacts'
 import VeroImage from '../assets/vero-modified.png'
 import '../styles/Contact.css'
