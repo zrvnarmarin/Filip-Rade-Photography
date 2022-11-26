@@ -2,10 +2,10 @@ import React from 'react'
 import '../../styles/ImageCard.css'
 import TestImage from '../../assets/nature.jpg'
 
-const ImageCard = () => {
+const ImageCard = ({onOpenModal}) => {
   return (
     <div className="container">
-        <img src={TestImage} className="image" />
+        <img src={TestImage} className="image" onClick={onOpenModal} />
         <div className="middle">
           <div className="text-white ">+</div>
         </div>
