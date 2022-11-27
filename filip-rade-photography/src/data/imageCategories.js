@@ -16,7 +16,6 @@ export const imageCategories = [
             {id: 2, name: 'neka landscape', description: 'Nesto dva', source: 'https://www.revolvermag.com/sites/default/files/styles/image_750_x_420/public/media/images/article/gettyimages-83283262.jpg?itok=iX7MHA_C&timestamp=1537301844'},
             {id: 3, name: 'neko ime', description: 'Nesto tri', source: 'https://www.revolvermag.com/sites/default/files/styles/image_750_x_420/public/media/images/article/gettyimages-83283262.jpg?itok=iX7MHA_C&timestamp=1537301844'},
             {id: 4, name: 'isus', description: 'Nesto cetiri', source: 'https://www.revolvermag.com/sites/default/files/styles/image_750_x_420/public/media/images/article/gettyimages-83283262.jpg?itok=iX7MHA_C&timestamp=1537301844'},
-            {id: 5, name: 'landscape krist', description: 'Nesto pet', source: 'https://www.ab-gradnja.hr/assets/images/galerija-reference/06_stambeni/stambena_grabrik/stambena_zgrada_Grabrik__Karlovac_1.jpg'}
         ]
     }
 ]
