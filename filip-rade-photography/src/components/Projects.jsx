@@ -4,6 +4,7 @@ import ImageCardsGrid from './Home/ImageCardsGrid'
 import ImageCard from './Home/ImageCard'
 import { imageCategories } from '../data/imageCategories'
 import '../styles/Home.css'
+import { useEffect } from 'react'
 
 const Projects = () => {
   const [currentImageObject, setCurrentImageObject] = useState({})
@@ -13,19 +14,23 @@ const Projects = () => {
   const openModalHandler = () => modalRef.current.style.display = "block"
   const closeModalHandler = () => modalRef.current.style.display = "none"
 
-  const sum = imageCategories.map(category => {
+  const sumOfImages = imageCategories.map(category => {
     if (category.name === imageCategory) 
       return category.images.length 
   })
 
-  const setImageObject = imageObject => setImageObject(imageObject) 
+  useEffect(() => {
+    console.log(currentImageObject)
+  }, [currentImageObject])
 
   const setNextImageObject = () => {
     imageCategories.map(category => {
       if (category.name === imageCategory) {
         const nextImageObject = category.images.find(categoryImageObject => categoryImageObject.id === currentImageObject.id + 1)
         setCurrentImageObject(nextImageObject)
-        console.log(nextImageObject)
+        
+        if (nextImageObject === undefined) 
+          setCurrentImageObject(category.images[0])
       }
     })
   }
@@ -33,9 +38,10 @@ const Projects = () => {
   const setPreviousImageObject = () => {
     imageCategories.map(category => {
       if (category.name === imageCategory) {
-        const nextImageObject = category.images.find(categoryImageObject => categoryImageObject.id === currentImageObject.id - 1)
-        setCurrentImageObject(nextImageObject)
-        console.log(nextImageObject)
+        const previousImageObject = category.images.find(categoryImageObject => categoryImageObject.id === currentImageObject.id - 1)
+        setCurrentImageObject(previousImageObject)
+
+        // console.log(previousImageObject)
       }
     })
   }
@@ -60,7 +66,7 @@ const Projects = () => {
         )}
         
         <div className="modal" ref={modalRef}>
-          <span className='slide-number'>{currentImageObject.id}/{sum}</span>
+          <span className='slide-number'>{currentImageObject.id}/{sumOfImages}</span>
           <span className="close cursor" onClick={closeModalHandler} >&times;</span>
           <div className="modal-content">
             <div>
