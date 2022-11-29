@@ -3,7 +3,7 @@ import '../../styles/ImageCard.css'
 
 const ImageCard = ({id, name, source, description, onOpenModal, onSetImageObject}) => {
 
-  const openModalAndInfo = (e) => {
+  const openModalAndSetImageObject = () => {
     onOpenModal()
 
     const imageObjectData = {
@@ -17,7 +17,11 @@ const ImageCard = ({id, name, source, description, onOpenModal, onSetImageObject
   }
   return (
     <div className="container">
-        <img src={source} className="image" onClick={openModalAndInfo} />
+        <img 
+          src={source} 
+          className="image" 
+          onClick={openModalAndSetImageObject} 
+        />
         <div className="middle">
           <div className="text-white ">+</div>
         </div>

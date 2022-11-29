@@ -4,7 +4,6 @@ import ImageCardsGrid from './Home/ImageCardsGrid'
 import ImageCard from './Home/ImageCard'
 import { imageCategories } from '../data/imageCategories'
 import '../styles/Home.css'
-import { useEffect } from 'react'
 
 const Projects = () => {
   const [currentImageObject, setCurrentImageObject] = useState({})
@@ -19,16 +18,12 @@ const Projects = () => {
       return category.images.length 
   })
 
-  useEffect(() => {
-    console.log(currentImageObject)
-  }, [currentImageObject])
-
   const setNextImageObject = () => {
     imageCategories.map(category => {
       if (category.name === imageCategory) {
         const nextImageObject = category.images.find(categoryImageObject => categoryImageObject.id === currentImageObject.id + 1)
         setCurrentImageObject(nextImageObject)
-        
+
         if (nextImageObject === undefined) 
           setCurrentImageObject(category.images[0])
       }
@@ -40,8 +35,9 @@ const Projects = () => {
       if (category.name === imageCategory) {
         const previousImageObject = category.images.find(categoryImageObject => categoryImageObject.id === currentImageObject.id - 1)
         setCurrentImageObject(previousImageObject)
-
-        // console.log(previousImageObject)
+        
+        if (previousImageObject === undefined) 
+          setCurrentImageObject(category.images[category.images.length - 1])
       }
     })
   }
