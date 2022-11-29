@@ -13,8 +13,8 @@ export const imageCategories = [
         id: 2, name: 'Landscape Series', description: 'This is an landscape category of images', 
         images: [
             {id: 1, name: 'nesto', description: 'Nesto', source: 'https://www.revolvermag.com/sites/default/files/styles/image_750_x_420/public/media/images/article/gettyimages-83283262.jpg?itok=iX7MHA_C&timestamp=1537301844'},
-            {id: 2, name: 'neka landscape', description: 'Nesto dva', source: 'https://www.revolvermag.com/sites/default/files/styles/image_750_x_420/public/media/images/article/gettyimages-83283262.jpg?itok=iX7MHA_C&timestamp=1537301844'},
-            {id: 3, name: 'neko ime', description: 'Nesto tri', source: 'https://www.revolvermag.com/sites/default/files/styles/image_750_x_420/public/media/images/article/gettyimages-83283262.jpg?itok=iX7MHA_C&timestamp=1537301844'},
+            {id: 2, name: 'neka landscape', description: 'Nesto dva', source: 'https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg'},
+            {id: 3, name: 'neko ime', description: 'Nesto tri', source: 'https://www.sciencealert.com/images/2022/09/ManWalkingInForest.jpg'},
             {id: 4, name: 'isus', description: 'Nesto cetiri', source: 'https://www.revolvermag.com/sites/default/files/styles/image_750_x_420/public/media/images/article/gettyimages-83283262.jpg?itok=iX7MHA_C&timestamp=1537301844'},
         ]
     }

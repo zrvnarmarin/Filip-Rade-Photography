@@ -4,21 +4,40 @@ import ImageCardsGrid from './Home/ImageCardsGrid'
 import ImageCard from './Home/ImageCard'
 import { imageCategories } from '../data/imageCategories'
 import '../styles/Home.css'
-import TestImage from '../assets/nature.jpg'
 
 const Projects = () => {
-  const [imageObject, setImageObject] = useState({})
+  const [currentImageObject, setCurrentImageObject] = useState({})
   const { imageCategory } = useParams()
   const modalRef = useRef()
 
   const openModalHandler = () => modalRef.current.style.display = "block"
   const closeModalHandler = () => modalRef.current.style.display = "none"
 
-  const sum = imageCategories.map(category => { if (category.name === imageCategory) return category.images.length })
+  const sum = imageCategories.map(category => {
+    if (category.name === imageCategory) 
+      return category.images.length 
+  })
 
-  const displayImageObject = (imageObject) => {
-    console.log(imageObject)
-    setImageObject(imageObject)
+  const setImageObject = imageObject => setImageObject(imageObject) 
+
+  const setNextImageObject = () => {
+    imageCategories.map(category => {
+      if (category.name === imageCategory) {
+        const nextImageObject = category.images.find(categoryImageObject => categoryImageObject.id === currentImageObject.id + 1)
+        setCurrentImageObject(nextImageObject)
+        console.log(nextImageObject)
+      }
+    })
+  }
+
+  const setPreviousImageObject = () => {
+    imageCategories.map(category => {
+      if (category.name === imageCategory) {
+        const nextImageObject = category.images.find(categoryImageObject => categoryImageObject.id === currentImageObject.id - 1)
+        setCurrentImageObject(nextImageObject)
+        console.log(nextImageObject)
+      }
+    })
   }
 
   return (
@@ -32,25 +51,24 @@ const Projects = () => {
                 id={image.id} 
                 name={image.name} 
                 source={image.source} 
+                description={image.description}
                 onOpenModal={openModalHandler}
-                onShowImageObject={displayImageObject}
+                onSetImageObject={setCurrentImageObject}
               />
             )}
           }
         )}
         
         <div className="modal" ref={modalRef}>
-          <span className='slide-number'>{imageObject.id}/{sum}</span>
+          <span className='slide-number'>{currentImageObject.id}/{sum}</span>
           <span className="close cursor" onClick={closeModalHandler} >&times;</span>
           <div className="modal-content">
             <div>
-              <p>{imageObject.id}</p>
-              <p>{imageObject.id}</p>
-              <img src={imageObject.source} />
+              <img src={currentImageObject.source} />
             </div>
             
-            <a className="prev" >&#10094;</a>
-            <a className="next" >&#10095;</a>
+            <a className="prev" onClick={setPreviousImageObject} >&#10094;</a>
+            <a className="next" onClick={setNextImageObject}  >&#10095;</a>
           </div>
         </div>
 

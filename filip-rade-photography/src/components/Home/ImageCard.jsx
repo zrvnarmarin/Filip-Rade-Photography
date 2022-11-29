@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/ImageCard.css'
 
-const ImageCard = ({id, name, source, onOpenModal, onShowImageObject}) => {
+const ImageCard = ({id, name, source, description, onOpenModal, onSetImageObject}) => {
 
   const openModalAndInfo = (e) => {
     onOpenModal()
@@ -9,10 +9,11 @@ const ImageCard = ({id, name, source, onOpenModal, onShowImageObject}) => {
     const imageObjectData = {
       name: name,
       id: id,
-      source: source
+      source: source,
+      description: description
     }
 
-    onShowImageObject(imageObjectData)
+    onSetImageObject(imageObjectData)
   }
   return (
     <div className="container">
