@@ -1,5 +1,5 @@
 import React from 'react'
-import VeroImage from '../../assets/Social Media Icons/vero.webp'
+import { socialMediaImages } from '../../data/socialMediaImages'
 
 const SpinningCube = () => {
   return (
@@ -7,22 +7,22 @@ const SpinningCube = () => {
         <div className="box-area">
         <div className="box box-front">
             <div className="test-container">
-            <a href="https://www.linkedin.com"><img className="test-image" src="https://www.qualitylogoproducts.com/images/_promo-university/social-media/_icon_linkedin-smi.svg" /></a>
+            <a href="https://www.linkedin.com"><img className="test-image" src={socialMediaImages.linkedin} /></a>
             </div>
         </div>
         <div className="box box-right">
             <div className="test-container">
-            <a href="https://www.facebook.com"><img className="test-image" src="https://www.qualitylogoproducts.com/images/_promo-university/social-media/_icon_facebook-smi.svg" /></a>
+            <a href="https://www.facebook.com"><img className="test-image" src={socialMediaImages.facebook} /></a>
             </div>
         </div>
         <div className="box box-back">
             <div className="test-container">
-            <a href="https://www.instagram.com"><img className="test-image" src="https://www.qualitylogoproducts.com/images/_promo-university/social-media/_icon_instagram-smi.svg" /></a>
+            <a href="https://www.instagram.com"><img className="test-image" src={socialMediaImages.instagram} /></a>
             </div>
         </div>
         <div className="box box-left">
             <div className="test-container">
-            <a href="https://www.vero.com"><img className="vero-image" src={VeroImage} /></a>
+            <a href="https://www.vero.com"><img className="vero-image" src={socialMediaImages.vero} /></a>
             </div>
         </div>
         <div className="box box-top"></div>
