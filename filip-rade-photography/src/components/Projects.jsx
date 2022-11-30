@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import ImageCardsGrid from './Home/ImageCardsGrid'
-import ImageCard from './Home/ImageCard'
+import ImageCardsGrid from './Projects/ImageCardsGrid'
+import ImageCard from './Projects/ImageCard'
 import { imageCategories } from '../data/imageCategories'
 import '../styles/Home.css'
+import ImageModal from './Projects/ImageModal'
 
 const Projects = () => {
   const [currentImageObject, setCurrentImageObject] = useState({})
@@ -13,7 +14,7 @@ const Projects = () => {
   const openModalHandler = () => modalRef.current.style.display = "block"
   const closeModalHandler = () => modalRef.current.style.display = "none"
 
-  const sumOfImages = imageCategories.map(category => {
+  const numberOfImages = imageCategories.map(category => {
     if (category.name === imageCategory) 
       return category.images.length 
   })
@@ -60,19 +61,16 @@ const Projects = () => {
             )}
           }
         )}
-        
-        <div className="modal" ref={modalRef}>
-          <span className='slide-number'>{currentImageObject.id}/{sumOfImages}</span>
-          <span className="close cursor" onClick={closeModalHandler} >&times;</span>
-          <div className="modal-content">
-            <div>
-              <img src={currentImageObject.source} />
-            </div>
-            
-            <a className="prev" onClick={setPreviousImageObject} >&#10094;</a>
-            <a className="next" onClick={setNextImageObject}  >&#10095;</a>
-          </div>
-        </div>
+
+        <ImageModal
+          modalRef={modalRef} 
+          numberOfImages={numberOfImages}  
+          currentImageId={currentImageObject.id}
+          currentImageSource={currentImageObject.source}
+          onCloseModal={closeModalHandler}
+          onSetPreviousImageObject={setPreviousImageObject}
+          onSetNextImageObject={setNextImageObject}
+        />
 
       </ImageCardsGrid>
 

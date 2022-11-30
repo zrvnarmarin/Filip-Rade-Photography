@@ -1,107 +1,26 @@
 import React from 'react'
-import { contactInfo } from '../data/contacts'
-import VeroImage from '../assets/vero-modified.png'
+import SpinningCube from './Contact/SpinningCube'
+import ContactLinks from './Contact/ContactLinks'
+import ContactForm from './Contact/ContactForm'
 import '../styles/Contact.css'
 
 const Contact = () => {
   return (
     <div className='font-robotoSlab bg-[#1f1f21]'>
       <h1 className='text-center text-white font-light text-6xl pt-8 pb-14'>Contact</h1>
-
-      <div className='grid grod-cols-1 sm:grid-cols-2 xs:px-4 sm:px-12 gap-6'>
-
-        <div className="wrapper grid place-content-center">
-          <div className="box-area">
-              <div className="box box-front">
-                  <div className="test-container">
-                      <img className="test-image" src="https://www.qualitylogoproducts.com/images/_promo-university/social-media/_icon_linkedin-smi.svg" />
-                  </div>
-              </div>
-              <div className="box box-right">
-                  <div className="test-container">
-                      <img className="test-image" src="https://www.qualitylogoproducts.com/images/_promo-university/social-media/_icon_facebook-smi.svg" />
-                  </div>
-              </div>
-              <div className="box box-back">
-                  <div className="test-container">
-                      <img className="test-image" src="https://www.qualitylogoproducts.com/images/_promo-university/social-media/_icon_instagram-smi.svg" />
-                  </div>
-              </div>
-              <div className="box box-left">
-                  <div className="test-container">
-                      <img className="vero-image" src={VeroImage} />
-                  </div>
-              </div>
-              <div className="box box-top"></div>
-              <div className="box box-bottom"></div>
-          </div>
-        </div>
-        
-        <div>
-          <h2 className='p-2 flex flex-wrap text-3xl text-white font-medium linear-wipe'>Will you make your memories count?</h2>
-          <h2 className='p-2 flex flex-wrap text-white text-lg font-normal italic'>For all enquires and bookings, please contact me using one of the
+      <div className='grid grod-cols-1 md:grid-cols-2 xs:px-4 sm:px-12 gap-6'>
+        <SpinningCube />
+        <div className='pt-32 md:pt-0'>
+          <h2 className='p-2 flex flex-wrap text-3xl text-white font-medium linear-wipe'>
+            Will you make your memories count?
+          </h2>
+          <h2 className='p-2 flex flex-wrap text-white text-lg font-normal italic'>
+            For all enquires and bookings, please contact me using one of the
             following, or the form below..
           </h2>
-          <div className='pt-4 pb-4'>
-            <div className='px-2 py-1'>
-              <span className='text-white text-lg font-medium'>Email: </span>
-              <a className='text-slate-300 hover:text-slate-900 hover text-base' href=''>{contactInfo.email}</a>
-            </div>
-            <div className='px-2 py-1'>
-              <span className='text-white text-lg font-medium'>Facebook: </span>
-              <a className='text-slate-300 hover:text-slate-900 text-base' href={contactInfo.facebook}>{contactInfo.facebook}</a>
-            </div>
-            <div className='px-2 py-1'>
-              <span className='text-white text-lg font-medium'>Vero: </span>
-              <a className='text-slate-300 hover:text-slate-900 text-base' href={contactInfo.vero}>{contactInfo.vero}</a>
-            </div>
-            <div className='px-2 py-1'>
-              <span className='text-white text-lg font-medium'>Instagram: </span>
-              <a className='text-slate-300 hover:text-slate-900 text-base' href={contactInfo.instagram}>{contactInfo.instagram}</a>
-            </div>
-            <div className='px-2 py-1'>
-              <span className='text-white text-lg font-medium'>LinkedIn: </span>
-              <a className='text-slate-300 hover:text-slate-900 text-base' href={contactInfo.linkedin}>{contactInfo.linkedin}</a>
-            </div>
-            <div className='px-2 py-1'>
-              <span className='text-white text-lg font-medium'>Phone: </span>
-              <a className='text-slate-300 hover:text-slate-900 text-base' href=''>{contactInfo.phone}</a>
-            </div>
-          </div>
-
-          <form className='pt-2 border-black'>
-
-            <div className='pb-4'>
-              <label className='px-2 py-1 text-white' htmlFor="nameInput">Name*</label> <br />
-              <div className='flex flex-wrap sm:flex-row gap-4 px-2 py-1'>
-                <div className='flex flex-col flex-1'>
-                  <input className='p-3 flex flex-1 focus:outline-none' type="text" />
-                  <span className='text-sm text-slate-100 pt-1'>First name</span>
-                </div>
-                <div className='flex flex-col flex-1'>
-                  <input className='p-3 flex flex-1 focus:outline-none'  type="text" />
-                  <span className='text-sm text-slate-100 pt-1'>Last name</span>
-                </div>
-              </div>
-            </div>
-
-            <div className='flex flex-col gap-1 pb-4'>
-              <label className='px-2 py-1 text-white' htmlFor="emailInput">Email*</label> 
-              <input className='flex flex-1 mx-2 p-3 focus:outline-none' type="text" />
-            </div>
-
-            <div className='flex flex-col gap-1'>
-              <label className='px-2 py-1 text-white' htmlFor="emailInput">Message*</label> 
-              <textarea className='flex flex-1 mx-2 p-3 resize-y focus:outline-none' name="message" id="messageInput" cols="30" rows="10"></textarea>
-            </div>
-
-            <div className='px-2 py-7'>
-              <button className='px-12 py-6 bg-[#494949] text-white'>Submit</button>
-            </div>
-
-          </form>
+          <ContactLinks />
+          <ContactForm />
         </div>
-        
       </div>
     </div>
   )

@@ -23,7 +23,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.972);
   }
   
   /* Modal Content */
@@ -85,6 +85,10 @@
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
+  }
+
+  .prev {
+    left: 0;
   }
   
   /* Position the "next button" to the right */
