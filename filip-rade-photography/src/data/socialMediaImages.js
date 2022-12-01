@@ -1,7 +1,7 @@
-import Linkedin from '../assets/Images/Social Media Icons/linkedin.svg'
-import Facebook from '../assets/Images/Social Media Icons/facebook.svg'
-import Instagram from '../assets/Images/Social Media Icons/instagram.svg'
-import Vero from '../assets/Images/Social Media Icons/vero.webp'
+import Linkedin from '../assets/Images/Social Media/linkedin.svg'
+import Facebook from '../assets/Images/Social Media/facebook.svg'
+import Instagram from '../assets/Images/Social Media/instagram.svg'
+import Vero from '../assets/Images/Social Media/vero.webp'
 
 export const socialMediaImages = {
     linkedin: Linkedin,
