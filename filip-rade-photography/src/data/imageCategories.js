@@ -10,7 +10,7 @@ export const imageCategories = [
         ]
     },
     {
-        id: 2, name: 'Landscape Series', description: 'This is an landscape category of images', 
+        id: 2, name: 'Landscape Series', description: 'This is an urban category of images This is an urban category of images This is an urban category of images This is an urban category of images This is an urban category of images This is an urban category of images This is an urban category of images This is an urban category of images This is an urban category of images This is an urban category of images', 
         images: [
             {id: 1, name: 'nesto', description: 'Nesto', source: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Big_Nature_%28155420955%29.jpeg'},
             {id: 2, name: 'neka landscape', description: 'Nesto dva', source: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Big_Nature_%28155420955%29.jpeg'},

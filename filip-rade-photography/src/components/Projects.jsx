@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { imageCategories } from '../data/imageCategories'
 import ImageCardsGrid from './Projects/ImageCardsGrid'
 import ImageCard from './Projects/ImageCard'
-import { imageCategories } from '../data/imageCategories'
-import '../styles/Home.css'
 import ImageModal from './Projects/ImageModal'
 import AboutImageSeries from './Projects/AboutImageSeries'
+import '../styles/Home.css'
 
 const Projects = () => {
   const [currentImageObject, setCurrentImageObject] = useState({})
@@ -46,12 +46,12 @@ const Projects = () => {
 
   return (
     <>
-      {/* <AboutImageSeries imageCategory={imageCategory} /> */}
       {imageCategories.map(category => {
         if (category.name === imageCategory) {
-          return <AboutImageSeries imageCategory={imageCategory}  imageCategoryDescription={category.description} />
-        }
-      })}
+          return <AboutImageSeries key={category.id} imageCategory={imageCategory} imageCategoryDescription={category.description} />
+        }})
+      }
+
       <ImageCardsGrid>
         {imageCategories.map(category => {
           if (category.name === imageCategory) {
@@ -78,7 +78,6 @@ const Projects = () => {
           onSetPreviousImageObject={setPreviousImageObject}
           onSetNextImageObject={setNextImageObject}
         />
-
       </ImageCardsGrid>
 
     </>

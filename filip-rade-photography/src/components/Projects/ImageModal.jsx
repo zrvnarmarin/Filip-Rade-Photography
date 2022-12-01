@@ -4,7 +4,7 @@ import '../../styles/Home.css'
 
 const ImageModal = ({modalRef, currentImageId, numberOfImages, onCloseModal, currentImageSource, onSetPreviousImageObject, onSetNextImageObject  }) => {
   return (
-    <div className="modal" ref={modalRef}>
+    <div className="modal z-50" ref={modalRef}>
       <div className='h-[90%] flex items-center justify-center'>
   
         <div>

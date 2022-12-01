@@ -2,7 +2,6 @@
     position: relative;
     width: 100%;
     min-width: 100%;
-    max-width: 100%;
   }
   
   .image {
@@ -28,14 +27,15 @@
     transition: .3s ease;
     opacity: 0;
     position: absolute;
-    top: 90%;
+    top: 94%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+    padding: 0 5px;
   }
   .container:hover .image {
-    opacity: 0.8;
+    opacity: 0.45;
     cursor: pointer;
   }
   
