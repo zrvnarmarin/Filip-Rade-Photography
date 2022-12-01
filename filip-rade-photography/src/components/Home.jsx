@@ -34,31 +34,32 @@ const Home = () => {
   }
   
   return (
-    <ImageCardsGrid>
-      {mainSeriesCategory.map(category => {
-        return category.images.map(image => 
-          <ImageCard 
-            key={image.id} 
-            id={image.id} 
-            name={image.name} 
-            source={image.source} 
-            description={image.description}
-            onOpenModal={openModalHandler}
-            onSetImageObject={setCurrentImageObject}
-          />
+    <>
+      <ImageCardsGrid>
+        {mainSeriesCategory.map(category => {
+          return category.images.map(image =>
+            <ImageCard
+              key={image.id}
+              id={image.id}
+              name={image.name}
+              source={image.source}
+              description={image.description}
+              onOpenModal={openModalHandler}
+              onSetImageObject={setCurrentImageObject}
+            />
+          )}
         )}
-      )}
-
-      <ImageModal
-        modalRef={modalRef} 
-        numberOfImages={numberOfImages}  
-        currentImageId={currentImageObject.id}
-        currentImageSource={currentImageObject.source}
-        onCloseModal={closeModalHandler}
-        onSetPreviousImageObject={setPreviousImageObject}
-        onSetNextImageObject={setNextImageObject}
-      />
-    </ImageCardsGrid>
+        <ImageModal
+          modalRef={modalRef}
+          numberOfImages={numberOfImages}
+          currentImageId={currentImageObject.id}
+          currentImageSource={currentImageObject.source}
+          onCloseModal={closeModalHandler}
+          onSetPreviousImageObject={setPreviousImageObject}
+          onSetNextImageObject={setNextImageObject}
+        />
+      </ImageCardsGrid>
+    </>
   )
 }
 

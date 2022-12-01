@@ -28,7 +28,7 @@ const ContactForm = () => {
         </div>
 
         <div className='px-2 py-7'>
-            <button className='px-12 py-6 bg-[#494949] text-white'>Submit</button>
+            <button className='px-12 py-6 bg-[#494949] text-white text-xl'>Submit</button>
         </div>
     </form>
   )

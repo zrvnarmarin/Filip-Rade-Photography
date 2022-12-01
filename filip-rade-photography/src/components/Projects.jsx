@@ -5,6 +5,7 @@ import ImageCard from './Projects/ImageCard'
 import { imageCategories } from '../data/imageCategories'
 import '../styles/Home.css'
 import ImageModal from './Projects/ImageModal'
+import AboutImageSeries from './Projects/AboutImageSeries'
 
 const Projects = () => {
   const [currentImageObject, setCurrentImageObject] = useState({})
@@ -45,6 +46,12 @@ const Projects = () => {
 
   return (
     <>
+      {/* <AboutImageSeries imageCategory={imageCategory} /> */}
+      {imageCategories.map(category => {
+        if (category.name === imageCategory) {
+          return <AboutImageSeries imageCategory={imageCategory}  imageCategoryDescription={category.description} />
+        }
+      })}
       <ImageCardsGrid>
         {imageCategories.map(category => {
           if (category.name === imageCategory) {

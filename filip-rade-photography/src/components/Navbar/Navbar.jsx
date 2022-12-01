@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='bg-black text-white font-robotoSlab flex justify-between items-center gap-12 p-4'>
+      <nav className='bg-black sticky top-0 z-40 text-white font-robotoSlab font-normal italic flex sm:flex-wrap items-center justify-between gap-12 p-4'>
         <NavbarLogo />
         <NavbarLinks />
         <MenuButton onClickMenuButton={menuButtonHandler} />
