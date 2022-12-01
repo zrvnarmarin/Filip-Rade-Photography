@@ -2,7 +2,6 @@ import React from 'react'
 import { socialMediaIcons } from '../data/fotterSocialMediaIcons'
 import { contactInfo } from '../data/contacts'
 
-
 const Footer = () => {
   return (
     <div className='bg-[#1f1f21] grid grid-cols-1 sm:grid-cols-2 items-center pt-24'>

@@ -3,9 +3,9 @@ import AuthorImage from '../assets/Images/Author/me.jpg'
 
 const About = () => {
   return (
-    <section className='font-robotoSlab bg-[#1f1f21] flex flex-col gap-24 px-2'>
+    <section className='font-robotoSlab bg-[#1f1f21] flex flex-col gap-20 px-2'>
 
-      <h1 className='text-center text-white font-light text-6xl pt-8 pb-14'>About</h1>
+      <h1 className='text-center text-white font-light text-6xl pt-8'>About</h1>
 
       <div className='grid grod-cols-1 sm:grid-cols-2 xs:px-4 sm:px-12 gap-6'>
         <img className='' src={AuthorImage} />
