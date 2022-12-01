@@ -1,4 +1,4 @@
-import Linkedin from '../assets/Images/Social Media Icons/linkedin.svg'
+import Linkedin from '../assets/Icons/linkedinicon.svg'
 import Facebook from '../assets/Images/Social Media Icons/facebook.svg'
 import Instagram from '../assets/Images/Social Media Icons/instagram.svg'
 import Vero from '../assets/Images/Social Media Icons/vero.webp'

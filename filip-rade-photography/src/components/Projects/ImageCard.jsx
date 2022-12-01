@@ -17,17 +17,16 @@ const ImageCard = ({id, name, source, description, onOpenModal, onSetImageObject
   }
   
   return (
-    <div className="container">
-      <img 
-        src={source} 
-        className="image" 
-        onClick={openModalAndSetImageObject} 
-      />
-      <div className="cross">
-        <div className=" text-white text-4xl font-thin italic ">+</div>
-      </div>
-      <div className="text-container">
-        <div className="font-robotoSlab text-white text-lg font-normal italic">{name}</div>
+    <div className='container'>
+      <div className="w-full p-1">
+        <img className="block object-cover object-center sm:h-[400px] image"
+          src={source} onClick={openModalAndSetImageObject}  />
+           <div className="cross">
+             <div className=" text-white text-4xl font-thin italic ">+</div>
+           </div>
+           <div className="text-container">
+             <div className="font-robotoSlab text-white text-lg font-normal italic">{name}</div>
+           </div>
       </div>
     </div>
   )

@@ -2,7 +2,9 @@ import React, {useState, useRef } from 'react'
 import ImageCardsGrid from './Projects/ImageCardsGrid'
 import ImageCard from './Projects/ImageCard.jsx'
 import ImageModal from './Projects/ImageModal'
-import { mainSeriesCategory } from '../data/imageCategories'
+import { imageCategories, mainSeriesCategory } from '../data/imageCategories'
+import '../styles/Home.css'
+import '../styles/ImageCard.css'
 
 const Home = () => {
   const [currentImageObject, setCurrentImageObject] = useState({})
